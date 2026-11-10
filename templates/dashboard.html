@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NOOK | My Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Press+Start+2P&family=Righteous&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="dashboard-body">
+
+
+<div class="dashboard-layout">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <a href="/" class="logo">NOOK<span>!</span></a>
+
+        <p class="sidebar-label">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+
+            <a href="/dashboard" class="side-link selected">
+                ✿ &nbsp; DASHBOARD
+            </a>
+
+            <a href="/wardrobe" class="side-link">
+                ▣ &nbsp; MY WARDROBE
+            </a>
+
+            <a href="#" class="side-link">
+                ✧ &nbsp; OUTFIT GENERATOR
+            </a>
+
+            <a href="#" class="side-link">
+                ♡ &nbsp; OUTFIT PLANNER
+            </a>
+
+            <a href="#" class="side-link">
+                ★ &nbsp; SAVED OUTFITS
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-note">
+                <span>✿</span>
+                <p>A little style<br>goes a long way!</p>
+            </div>
+
+            <a href="/" class="side-link">← BACK HOME</a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="dashboard-main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="dashboard-topbar">
+
+            <div>
+                <p class="eyebrow">MONDAY, YOUR STYLE DAY!</p>
+                <h2>MY LITTLE CORNER ♡</h2>
+            </div>
+
+            <div class="profile-box">
+                <div class="profile-avatar">G</div>
+                <span>MY PROFILE ▾</span>
+            </div>
+
+        </header>
+
+
+
+        <!-- WELCOME PANEL -->
+
+        <section class="welcome-panel">
+
+            <div class="welcome-text">
+
+                <p class="eyebrow">WELCOME BACK!</p>
+
+                <h1>Hey, Fashion Lover! <span>✿</span></h1>
+
+                <p>
+                    Ready to give your wardrobe a little love?
+                    Let's find something fabulous to wear.
+                </p>
+
+                <a href="#" class="retro-button dashboard-button">
+                    EXPLORE MY CLOSET →
+                </a>
+
+            </div>
+
+            <div class="welcome-decoration">
+                <span>♡</span>
+                <p>YOUR STYLE.<br>YOUR RULES.</p>
+                <span>✦</span>
+            </div>
+
+        </section>
+
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats-section">
+
+            <div class="dashboard-section-heading">
+                <h2>YOUR WARDROBE AT A GLANCE</h2>
+                <span>✧ THE COLLECTION</span>
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card stat-pink">
+                    <p>MY CLOTHING</p>
+                    <h3>00</h3>
+                    <span>PIECES IN CLOSET</span>
+                </div>
+
+                <div class="stat-card stat-yellow">
+                    <p>SAVED OUTFITS</p>
+                    <h3>00</h3>
+                    <span>LOOKS TO REMEMBER</span>
+                </div>
+
+                <div class="stat-card stat-purple">
+                    <p>OUTFITS WORN</p>
+                    <h3>00</h3>
+                    <span>LOOKS SO FAR</span>
+                </div>
+
+                <div class="stat-card stat-mint">
+                    <p>NEW DISCOVERIES</p>
+                    <h3>00</h3>
+                    <span>COMBINATIONS FOUND</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="quick-actions-section">
+
+            <div class="dashboard-section-heading">
+                <h2>WHAT ARE WE DOING TODAY?</h2>
+                <span>✿ QUICK ACCESS</span>
+            </div>
+
+
+            <div class="actions-grid">
+
+                <a href="/wardrobe" class="action-card action-upload">
+                    <span>＋</span>
+                    <h3>ADD CLOTHES</h3>
+                    <p>Give your digital closet something new.</p>
+                    <small>UPLOAD NOW →</small>
+                </a>
+
+
+                <a href="#" class="action-card action-generate">
+                    <span>✧</span>
+                    <h3>FIND AN OUTFIT</h3>
+                    <p>Let NOOK find a look for you.</p>
+                    <small>GET STYLING →</small>
+                </a>
+
+
+                <a href="#" class="action-card action-planner">
+                    <span>♡</span>
+                    <h3>PLAN A LOOK</h3>
+                    <p>Mix, match and create your own outfit.</p>
+                    <small>OPEN PLANNER →</small>
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RECENTLY ADDED -->
+
+        <section class="recent-section">
+
+            <div class="dashboard-section-heading">
+                <h2>FRESH IN THE CLOSET</h2>
+                <a href="#">VIEW ALL →</a>
+            </div>
+
+
+            <div class="recent-grid">
+
+                <div class="recent-item">
+                    <div class="item-placeholder pink-item">♡</div>
+                    <p>YOUR TOPS</p>
+                    <small>RECENTLY ADDED</small>
+                </div>
+
+                <div class="recent-item">
+                    <div class="item-placeholder yellow-item">✿</div>
+                    <p>YOUR BOTTOMS</p>
+                    <small>RECENTLY ADDED</small>
+                </div>
+
+                <div class="recent-item">
+                    <div class="item-placeholder purple-item">✧</div>
+                    <p>YOUR SHOES</p>
+                    <small>RECENTLY ADDED</small>
+                </div>
+
+                <div class="recent-item">
+                    <div class="item-placeholder mint-item">★</div>
+                    <p>ACCESSORIES</p>
+                    <small>RECENTLY ADDED</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- STYLE NOTE -->
+
+        <section class="style-note">
+
+            <span>✿</span>
+
+            <div>
+                <p class="eyebrow">A LITTLE REMINDER</p>
+                <h3>You don't need more clothes. You need more combinations!</h3>
+            </div>
+
+            <span>♡</span>
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="dashboard-footer">
+            ● NOOK SYSTEM STATUS: READY
+            <span>YOUR PERSONAL FASHION SPACE ♡</span>
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+</body>
+</html>
