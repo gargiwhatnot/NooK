@@ -17,12 +17,9 @@
 
 <body class="dashboard-body">
 
-
 <div class="dashboard-layout">
 
-
     <!-- SIDEBAR -->
-
     <aside class="sidebar">
 
         <a href="/" class="logo">NOOK<span>!</span></a>
@@ -39,7 +36,7 @@
                 ▣ &nbsp; MY WARDROBE
             </a>
 
-            <a href="#" class="side-link">
+            <a href="/outfit-generator" class="side-link">
                 ✧ &nbsp; OUTFIT GENERATOR
             </a>
 
@@ -47,127 +44,176 @@
                 ♡ &nbsp; OUTFIT PLANNER
             </a>
 
-            <a href="#" class="side-link">
+            <a href=#" class="side-link">
                 ★ &nbsp; SAVED OUTFITS
             </a>
 
         </nav>
 
-
         <div class="sidebar-bottom">
-
-            <div class="sidebar-note">
-                <span>✿</span>
-                <p>A little style<br>goes a long way!</p>
-            </div>
-
             <a href="/" class="side-link">← BACK HOME</a>
-
         </div>
 
     </aside>
 
     <main class="dashboard-main wardrobe-main">
 
-    <div class="wardrobe-topbar">
-        <div>
-            <p class="eyebrow">YOUR PERSONAL CLOSET</p>
-            <h1>My Wardrobe ✿</h1>
-            <p>Everything you own, all in one place.</p>
-        </div>
-
-        <a href="/upload" class="retro-button primary-btn">
-            + ADD CLOTHES
-        </a>
-    </div>
-
-    <section class="wardrobe-welcome">
-        <div>
-            <h2>Welcome to your closet!</h2>
-            <p>
-                Start adding clothes from your existing wardrobe.
-                The more you add, the better your outfit recommendations
-                will become.
-            </p>
-        </div>
-        <span class="wardrobe-decoration">♡</span>
-    </section>
-
-    <section class="wardrobe-stats">
-        <div class="stat-card">
-        <span>Total Items</span>
-        <h2>{{ total_items }}</h2>
-        </div>
-
-        <div class="stat-card">
-           <span>Tops</span>
-           <h2>{{ total_tops }}</h2>
-        </div>
-
-        <div class="stat-card">
-            <span>Bottoms</span>
-            <h2>{{ total_bottoms }}</h2>
-        </div>
-
-        <div class="stat-card">
-            <span>Shoes</span>
-            <h2>{{ total_shoes }}</h2>
-        </div>
-    </section>
-
-    <section class="wardrobe-collection">
-
-        <div class="section-heading">
+        <div class="wardrobe-topbar">
             <div>
-                <h2>My Collection</h2>
-                <p>Your clothes, organised your way.</p>
+                <p class="eyebrow">YOUR PERSONAL CLOSET</p>
+                <h1>My Wardrobe ✿</h1>
+                <p>Everything you own, all in one place.</p>
             </div>
+
+            <a href="/upload" class="retro-button primary-btn">
+                + ADD CLOTHES
+            </a>
         </div>
 
-        <div class="wardrobe-filters">
-            <button class="filter-btn active">All Items</button>
-            <button class="filter-btn">Tops</button>
-            <button class="filter-btn">Bottoms</button>
-            <button class="filter-btn">Dresses</button>
-            <button class="filter-btn">Shoes</button>
-            <button class="filter-btn">Accessories</button>
-            <button class="filter-btn">Ethnic Wear</button>
-        </div>
+        <section class="wardrobe-welcome">
+            <div>
+                <h2>Welcome to your closet!</h2>
+                <p>
+                    Start adding clothes from your existing wardrobe.
+                    The more you add, the better your outfit recommendations
+                    will become.
+                </p>
+            </div>
+            <span class="wardrobe-decoration">♡</span>
+        </section>
 
-        {% if clothes %}
-        <div class="clothing-grid">
-        {% for item in clothes %}
-            <div class="clothing-card">
-                <img
-                    src="{{ url_for('static', filename='uploads/' + item.image) }}"
-                    alt="{{ item.name }}">
+        <section class="wardrobe-stats">
+            <div class="stat-card">
+                <span>Total Items</span>
+                <h2>{{ total_items }}</h2>
+            </div>
 
-                <div class="clothing-card-info">
-                    <h3>{{ item.name }}</h3>
-                    <p>{{ item.category }} · {{ item.colour }}</p>
-                    {% if item.occasion %}
-                        <span>{{ item.occasion }}</span>
-                    {% endif %}
+            <div class="stat-card">
+                <span>Tops</span>
+                <h2>{{ total_tops }}</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Bottoms</span>
+                <h2>{{ total_bottoms }}</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Shoes</span>
+                <h2>{{ total_shoes }}</h2>
+            </div>
+        </section>
+
+        <section class="wardrobe-collection">
+
+            <div class="section-heading">
+                <div>
+                    <h2>My Collection</h2>
+                    <p>Your clothes, organised your way.</p>
                 </div>
             </div>
-            {% endfor %}
-        </div>
-        {% else %}
 
-        <div class="wardrobe-empty">
-            <div class="empty-closet-icon">👗</div>
-            <h2>Your closet is waiting!</h2>
-        <p>
-            You haven't added any clothes yet.
-            Upload your first few pieces and start building
-            your digital wardrobe.
-        </p>
-        <a href="/upload" class="retro-button primary-btn">
-            + ADD YOUR FIRST ITEM
-        </a>
-        </div>
-{% endif %}
+            <div class="collection-filters">
+                <button class="category-btn active" data-filter="all">
+                    ALL ITEMS
+                </button>
+                <button class="category-btn" data-filter="tops">
+                    TOPS
+                </button>
+                <button class="category-btn" data-filter="bottoms">
+                    BOTTOMS
+                </button>
+                <button class="category-btn" data-filter="dresses">
+                    DRESSES
+                </button>
+                <button class="category-btn" data-filter="shoes">
+                    SHOES
+                </button>
+                <button class="category-btn" data-filter="accessories">
+                    ACCESSORIES
+                </button>
+                <button class="category-btn" data-filter="ethnic wear">
+                    ETHNIC WEAR
+                </button>
+            </div>
 
-    </section>
+            {% if clothes %}
+            <div class="clothing-grid">
+                {% for item in clothes %}
+                <div class="clothing-card" data-category="{{ item.category | lower }}">
+                    <img
+                        src="{{ url_for('static', filename='uploads/' + item.image) }}"
+                        alt="{{ item.name }}">
 
-</main>
+                    <div class="clothing-card-info">
+                        <h3>{{ item.name }}</h3>
+                        <p>{{ item.category }} · {{ item.colour }}</p>
+                        {% if item.occasion %}
+                            <span>{{ item.occasion }}</span>
+                        {% endif %}
+
+                        <form action="{{ url_for('delete_clothing', item_id=item.id) }}"
+                              method="POST"
+                              onsubmit="return confirm('Delete this clothing item?');">
+                            <button type="submit" class="delete-clothing-btn">
+                                DELETE
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+
+            <div class="wardrobe-empty">
+                <div class="empty-closet-icon">👗</div>
+                <h2>Your closet is waiting!</h2>
+                <p>
+                    You haven't added any clothes yet.
+                    Upload your first few pieces and start building
+                    your digital wardrobe.
+                </p>
+                <a href="/upload" class="retro-button primary-btn">
+                    + ADD YOUR FIRST ITEM
+                </a>
+            </div>
+            {% endif %}
+
+        </section>
+    </main>
+
+</div>
+
+<script>
+const categoryButtons = document.querySelectorAll(".category-btn");
+const clothingCards = document.querySelectorAll(".clothing-card");
+
+categoryButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        const selectedCategory = this.dataset.filter;
+
+        // Update active button
+        categoryButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+        this.classList.add("active");
+
+        // Filter clothing
+        clothingCards.forEach(card => {
+            const cardCategory = card.dataset.category;
+
+            if (
+                selectedCategory === "all" ||
+                cardCategory === selectedCategory
+            ) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>

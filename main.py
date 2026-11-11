@@ -6,6 +6,8 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
 import os
 import uuid
+import random
+import json
 
 app = Flask(__name__)
 
@@ -45,7 +47,6 @@ class Clothing(db.Model):
     guest_id = db.Column(db.String(100), nullable=True)
     user_id = db.Column(db.Integer, nullable=True)
 
-
 # CREATE GUEST SESSION
 @app.before_request
 def create_guest_session():
@@ -81,7 +82,17 @@ def home():
 # DASHBOARD
 @app.route("/dashboard")
 def dashboard():
-    return render_template("dashboard.html")
+
+    guest_id = session["guest_id"]
+
+    total_items = Clothing.query.filter_by(
+        guest_id=guest_id
+    ).count()
+
+    return render_template(
+        "dashboard.html",
+        total_items=total_items
+    )
 
 
 # WARDROBE
@@ -92,7 +103,7 @@ def wardrobe():
 
     clothes = Clothing.query.filter_by(
         guest_id=guest_id
-    ).all()
+    ).order_by(Clothing.id.desc()).all()
 
     total_items = len(clothes)
 
@@ -229,6 +240,30 @@ def upload():
 
     return render_template("upload.html")
 
+@app.route("/delete-clothing/<int:item_id>", methods=["POST"])
+def delete_clothing(item_id):
+
+    # Find clothing belonging to the current guest
+    item = Clothing.query.filter_by(
+        id=item_id,
+        guest_id=session["guest_id"]
+    ).first_or_404()
+
+    # Get image path
+    image_path = os.path.join(
+        app.config["UPLOAD_FOLDER"],
+        item.image
+    )
+
+    # Delete image file
+    if os.path.exists(image_path):
+        os.remove(image_path)
+
+    # Delete database record
+    db.session.delete(item)
+    db.session.commit()
+
+    return redirect(url_for("wardrobe"))
 
 # CREATE DATABASE
 with app.app_context():
