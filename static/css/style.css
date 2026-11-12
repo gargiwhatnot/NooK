@@ -2191,3 +2191,837 @@ a.retro-button {
     }
 
 }
+
+/* =========================================
+   ABOUT ME PAGE
+========================================= */
+
+.about-page {
+    width: 100%;
+    min-height: 100%;
+    padding: 35px 45px 50px;
+    color: #542b43;
+    background: #fff3d8;
+    overflow-x: hidden;
+}
+
+
+/* PAGE HEADER */
+
+.about-header {
+    position: relative;
+    text-align: center;
+    margin: 35px auto -15px;
+    padding: 15px 10px 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.about-eyebrow {
+    font-family: "Press Start 2P", cursive;
+    font-size: 9px;
+    margin-bottom: 15px;
+}
+
+.about-header h1 {
+    font-family: "Righteous", cursive;
+    font-size: 32px;
+    margin: 0;
+    color: #542b43;
+}
+
+.about-subtitle {
+    font-family: "Fredoka", sans-serif;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* =========================================
+   SCRAPBOOK LAYOUT
+========================================= */
+
+.about-scrapbook {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.15fr 1fr;
+    grid-template-rows: repeat(3, auto);
+
+    column-gap: 35px;
+    row-gap: 12px;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   LEFT COLUMN
+========================================= */
+
+.note-obsessed {
+    grid-column: 1;
+    grid-row: 1;
+
+    background: #f5c5d5;
+    transform: rotate(-2deg);
+}
+
+.note-random {
+    grid-column: 1;
+    grid-row: 2;
+
+    background: #f9df72;
+    transform: rotate(1.5deg);
+}
+
+.note-reads {
+    grid-column: 1;
+    grid-row: 3;
+
+    background: #b9e5d7;
+    transform: rotate(-2deg);
+}
+
+
+/* =========================================
+   CENTRE CHARACTER
+========================================= */
+
+.about-character {
+    position: relative;
+
+    grid-column: 2;
+    grid-row: 1 / 4;
+
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-character img {
+    width: 100%;
+    max-width: 350px;
+
+    height: auto;
+    object-fit: contain;
+
+    filter: drop-shadow(5px 5px 0 #542b43);
+}
+
+.character-caption {
+    font-family: "Fredoka", sans-serif;
+    font-size: 13px;
+
+    margin-top: 10px;
+
+    background: #f9df72;
+    padding: 5px 12px;
+
+    transform: rotate(-3deg);
+}
+
+
+/* CHARACTER INTRODUCTION */
+
+.character-intro {
+    width: 100%;
+    max-width: 290px;
+
+    margin-top: 22px;
+
+    text-align: center;
+    color: #542b43;
+}
+
+.character-intro h2 {
+    font-family: "Righteous", cursive;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.character-intro p {
+    font-family: "Fredoka", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.character-signoff {
+    display: inline-block;
+
+    font-family: "Press Start 2P", monospace;
+    font-size: 7px;
+
+    color: #a84e77;
+    line-height: 1.8;
+}
+
+
+/* CHARACTER DECORATIONS */
+
+.character-star {
+    position: absolute;
+    font-size: 25px;
+    color: #e65c8a;
+}
+
+.star-one {
+    top: 10%;
+    left: 5%;
+}
+
+.star-two {
+    top: 40%;
+    right: 0;
+    color: #9e82cb;
+}
+
+.star-three {
+    bottom: 20%;
+    left: 0;
+    color: #f9df72;
+}
+
+
+/* =========================================
+   RIGHT COLUMN
+========================================= */
+
+.note-happy {
+    grid-column: 3;
+    grid-row: 1;
+
+    background: #b9e5d7;
+    transform: rotate(2deg);
+}
+
+.note-personality {
+    grid-column: 3;
+    grid-row: 2;
+
+    background: #e9d5ff;
+    transform: rotate(-1.5deg);
+}
+
+.note-movies {
+    grid-column: 3;
+    grid-row: 3;
+
+    background: #f9df72;
+    transform: rotate(2deg);
+}
+
+
+/* =========================================
+   GENERAL NOTE STYLING
+========================================= */
+
+.about-note {
+    position: relative;
+    padding: 18px;
+    font-family: "Fredoka", sans-serif;
+}
+
+.about-note-label {
+    display: block;
+
+    font-family: "Press Start 2P", cursive;
+    font-size: 8px;
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.about-note h2 {
+    font-family: "Righteous", cursive;
+    font-size: 23px;
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+}
+
+.about-note p,
+.about-note li {
+    font-family: "Fredoka", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.about-note ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.about-note li {
+    margin-bottom: 5px;
+}
+
+
+/* NOTE DECORATIONS */
+
+.note-decoration {
+    position: absolute;
+
+    font-family: "Righteous", cursive;
+    font-size: 35px;
+
+    right: 12px;
+    bottom: 5px;
+
+    opacity: 0.65;
+}
+
+
+/* PERSONALITY TAGS */
+
+.personality-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.personality-tags span {
+    background: #fff3d8;
+    padding: 6px 10px;
+    border: 2px solid #542b43;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.personality-tags span {
+    background: #fff3d8;
+
+    padding: 6px 10px;
+
+    border: 2px solid #542b43;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* MUSIC SECTION */
+
+.about-music {
+    max-width: 1000px;
+    margin: 70px auto 50px;
+
+    text-align: center;
+}
+
+.section-heading {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 35px;
+}
+
+.section-heading h2 {
+    font-family: "Righteous", cursive;
+    font-size: 28px;
+    margin: 15px 0 8px;
+    text-align: center;
+}
+
+.section-heading p {
+    font-family: "Fredoka", sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* VINYL LAYOUT */
+
+.vinyl-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.vinyl-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+    color: #542b43;
+
+    transition: transform 0.25s ease;
+}
+
+.vinyl-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* VINYL RECORD */
+
+.vinyl {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            #292329 0px,
+            #292329 2px,
+            #373137 3px,
+            #292329 5px
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: vinyl-spin 7s linear infinite;
+
+    box-shadow: 5px 6px 0 #542b43;
+}
+
+
+/* VINYL CENTRE LABEL */
+
+.vinyl-label {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid #292329;
+
+    font-family: "Press Start 2P", cursive;
+    font-size: 9px;
+
+    color: #542b43;
+}
+
+.vinyl-pink .vinyl-label {
+    background: #f5c5d5;
+}
+
+.vinyl-purple .vinyl-label {
+    background: #e9d5ff;
+}
+
+.vinyl-yellow .vinyl-label {
+    background: #f9df72;
+}
+
+
+/* VINYL ANIMATION */
+
+@keyframes vinyl-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* MUSIC INFORMATION */
+
+.vinyl-info {
+    margin-top: 25px;
+}
+
+.vinyl-info h3 {
+    font-family: "Righteous", cursive;
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.vinyl-info p {
+    font-family: "Fredoka", sans-serif;
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+.spotify-hint {
+    font-family: "Press Start 2P", cursive;
+    font-size: 7px;
+
+    color: #9e82cb;
+}
+
+
+/* THINGS I COULD TALK ABOUT FOREVER */
+
+.about-forever {
+    max-width: 900px;
+    margin: 45px auto 25px;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+.about-forever h2 {
+    font-family: "Righteous", cursive;
+    font-size: 28px;
+
+    margin: 20px 0 30px;
+}
+
+.forever-topics {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.topic {
+    font-family: "Righteous", cursive;
+    font-size: 18px;
+
+    padding: 15px 25px;
+
+    border: 3px solid #542b43;
+    box-shadow: 4px 4px 0 #542b43;
+}
+
+.topic-pink {
+    background: #f5c5d5;
+    transform: rotate(-4deg);
+}
+
+.topic-yellow {
+    background: #f9df72;
+    transform: rotate(2deg);
+}
+
+.topic-purple {
+    background: #e9d5ff;
+    transform: rotate(-2deg);
+}
+
+.forever-caption {
+    font-family: "Fredoka", sans-serif;
+    font-size: 13px;
+
+    margin-top: 30px;
+}
+
+
+/* ABOUT FOOTER */
+
+.about-footer {
+    text-align: center;
+    margin-top: 30px;
+
+    font-family: "Press Start 2P", cursive;
+    font-size: 8px;
+
+    line-height: 2;
+}
+
+.about-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.about-socials a {
+    display: inline-block;
+    background: #f5c5d5;
+    padding: 10px 15px;
+    border: 2px solid #542b43;
+    box-shadow: 3px 3px 0 #542b43;
+    color: #542b43;
+    text-decoration: none;
+    font-family: "Press Start 2P", cursive;
+    font-size: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-socials a:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 #542b43;
+}
+
+.about-footer-credit {
+    font-family: "Fredoka", sans-serif;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   ABOUT ME RESPONSIVE
+========================================= */
+
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+
+    .about-page {
+        padding: 30px 25px;
+    }
+
+    .about-scrapbook {
+        column-gap: 15px;
+    }
+
+    .about-note {
+        padding: 14px;
+    }
+
+    .about-note h2 {
+        font-size: 19px;
+    }
+
+    .about-character img {
+        max-width: 300px;
+    }
+
+}
+
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+    .about-page {
+        padding: 25px 15px;
+    }
+
+    .about-header h1 {
+        font-size: 25px;
+    }
+
+    .about-eyebrow {
+        font-size: 7px;
+    }
+
+    .about-scrapbook {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+
+        gap: 15px;
+    }
+
+    .about-scrapbook {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+}
+
+.about-character {
+    grid-column: 1 / 3;
+    grid-row: 1;
+
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.about-character img {
+    max-width: 280px;
+}
+
+.note-obsessed {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.note-happy {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.note-random {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.note-personality {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.note-reads {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.note-movies {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+    .note-obsessed {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .note-happy {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .note-random {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .note-personality {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .about-note-label {
+        font-size: 6px;
+    }
+
+    .about-note h2 {
+        font-size: 16px;
+    }
+
+    .about-note p,
+    .about-note li {
+        font-size: 12px;
+    }
+
+    .note-decoration {
+        font-size: 25px;
+    }
+
+    .about-music {
+        margin-top: 50px;
+    }
+
+    .section-heading h2 {
+    font-size: 23px;
+    }
+
+    .character-intro {
+    max-width: 280px;
+    margin-top: 18px;
+}
+
+.character-intro h2 {
+    font-size: 24px;
+}
+
+.character-intro p {
+    font-size: 13px;
+}
+
+    .vinyl-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .vinyl {
+        width: 130px;
+        height: 130px;
+    }
+
+    .about-forever h2 {
+        font-size: 22px;
+    }
+
+    .topic {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+
+    .about-socials {
+        flex-wrap: wrap;
+    }
+
+}
+
+/* RETRO PIXEL MUSIC PLAYER */
+
+.retro-player {
+    width: 100%;
+    max-width: 230px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+    padding: 12px;
+    background: #fff3d8;
+    border: 3px solid #542b43;
+    box-shadow: 4px 4px 0 #542b43;
+}
+
+/* PLAY BUTTON */
+
+.pixel-play {
+    width: 42px;
+    height: 38px;
+    flex-shrink: 0;
+    background: #f5c5d5;
+    color: #542b43;
+    border: 3px solid #542b43;
+    box-shadow: 3px 3px 0 #542b43;
+    font-family: monospace;
+    font-size: 17px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.pixel-play:hover {
+    background: #f9df72;
+}
+
+.pixel-play:active {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+}
+
+/* PLAYER DETAILS */
+
+.player-details {
+    flex: 1;
+    min-width: 0;
+}
+
+/* PROGRESS BAR */
+
+.pixel-progress {
+    width: 100%;
+    height: 12px;
+    background: #e9d5ff;
+    border: 2px solid #542b43;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #b45d83;
+    transition: width 0.1s linear;
+}
+
+/* TIMESTAMP */
+
+.player-time {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    color: #542b43;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 6px;
+}

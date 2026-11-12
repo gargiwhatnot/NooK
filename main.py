@@ -265,6 +265,10 @@ def delete_clothing(item_id):
 
     return redirect(url_for("wardrobe"))
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 # CREATE DATABASE
 with app.app_context():
 

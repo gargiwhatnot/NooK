@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NOOK! | About Me</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Press+Start+2P&family=Righteous&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Decorative background -->
+
+    <div class="background-star star-one">✦</div>
+    <div class="background-star star-two">✿</div>
+    <div class="background-star star-three">✧</div>
+
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <a href="/" class="logo">NOOK<span>!</span></a>
+
+        <nav>
+            <a href="/" class="nav-link">HOME</a>
+            <a href="/wardrobe" class="nav-link">WARDROBE</a>
+            <a href="#" class="nav-link">OUTFITS</a>
+            <a href="{{ url_for('about') }}" class="nav-link active">ABOUT</a>
+        </nav>
+
+        <button class="retro-button login-btn">SIGN IN</button>
+
+    </header>
+
+    <!-- PAGE HEADER -->
+    <header class="about-header">
+        <p class="about-eyebrow">A LITTLE CORNER OF THE INTERNET</p>
+        <h1>THE GIRL BEHIND NOOK</h1>
+        <p class="about-subtitle">
+            page one · getting to know me
+        </p>
+    </header>
+
+    <!-- About Me Page -->
+
+    <main class="about-page">
+
+        <!-- SCRAPBOOK SECTION -->
+        <section class="about-scrapbook">
+            <!-- 01 / CURRENTLY OBSESSED -->
+            <div class="about-note note-obsessed">
+                <span class="about-note-label">
+                    01 / CURRENTLY OBSESSED
+                </span>
+                <h2>Currently<br>obsessed with</h2>
+                <ul>
+                    <li>Reading books</li>
+                    <li>Window shopping</li>
+                </ul>
+                <span class="note-decoration">♡</span>
+            </div>
+
+            <!-- CENTRAL CHARACTER + INTRODUCTION -->
+            <div class="about-character">
+                <span class="character-star star-one">✦</span>
+                <span class="character-star star-two">☆</span>
+                <span class="character-star star-three">✧</span>
+                <img
+                        src="{{ url_for('static', filename='images/about-character.png') }}"
+                        alt="Illustrated character representing me"
+                >
+                <span class="character-caption">
+                    that's literally me ♡
+                </span>
+                <div class="character-intro">
+                    <h2>Hi, I'm GarGi!</h2>
+                    <p>
+                        A curious mind with too many interests,
+                        too many browser tabs open, and a habit
+                        of getting lost in random thoughts.
+                        I like discovering new things, exploring
+                        ideas and romanticising the little things
+                        in life.
+                    </p>
+
+                    <span class="character-signoff">
+                        ✿ currently figuring things out ✿
+                    </span>
+                </div>
+            </div>
+            <!-- 02 / LITTLE JOYS -->
+            <div class="about-note note-happy">
+                <span class="about-note-label">
+                    02 / LITTLE JOYS
+                </span>
+                <h2>Things that<br>make me happy</h2>
+                <ul>
+                    <li>Night city lights</li>
+                    <li>Getting lost in a book</li>
+                    <li>Little discoveries</li>
+                </ul>
+                <span class="note-decoration">☼</span>
+            </div>
+            <!-- 03 / RANDOM FACT -->
+            <div class="about-note note-random">
+                <span class="about-note-label">
+                    03 / RANDOM FACT
+                </span>
+                <h2>Plot twist!</h2>
+                <p>
+                    I survived a serious accident
+                    when I was just 10 months old.
+                </p>
+                <span class="note-decoration">?!</span>
+            </div>
+
+            <!-- 04 / PERSONALITY -->
+            <div class="about-note note-personality">
+                <span class="about-note-label">
+                    04 / CURRENT PERSONALITY
+                </span>
+                <h2>My current<br>personality</h2>
+
+                <div class="personality-tags">
+                    <span>Nonchalant</span>
+                    <span>Talkative</span>
+                    <span>Judgemental</span>
+                </div>
+                <span class="note-decoration">Aa.</span>
+            </div>
+
+            <!-- 05 / FAVOURITE READS -->
+            <div class="about-note note-reads">
+                <span class="about-note-label">
+                    05 / BETWEEN THE PAGES
+                </span>
+                <h2>Favourite reads</h2>
+                <ul>
+                    <li>Heaven Official's Blessing by MXTX</li>
+                    <li>Heartless by Merissa Meyers</li>
+                    <li>The Unexpected Guest by Agatha Christie</li>
+                </ul>
+                <span class="note-decoration">📖</span>
+            </div>
+            <!-- 06 / FAVOURITE MOVIES -->
+            <div class="about-note note-movies">
+                <span class="about-note-label">
+                    06 / MOVIE CORNER
+                </span>
+                <h2>Favourite movies</h2>
+                <ul>
+                    <li>Clue 1985</li>
+                    <li>The Grand Budapest Hotel</li>
+                    <li>The Handmaiden 2016</li>
+                </ul>
+                <span class="note-decoration">✧</span>
+            </div>
+        </section>
+
+        <!-- MUSIC SECTION -->
+
+        <section class="about-music">
+
+            <div class="section-heading">
+                <p class="pixel-label">NOW SPINNING</p>
+                <h2>A little soundtrack of me</h2>
+                <p>Three songs currently living rent free in my head.</p>
+            </div>
+
+            <div class="vinyl-container">
+                <!-- SONG 1 -->
+                <div class="vinyl-card">
+                    <div class="vinyl vinyl-pink">
+                        <div class="vinyl-label">01</div>
+                    </div>
+                    <div class="vinyl-info">
+                        <h3>Let's Fall in Love 1964</h3>
+                        <p>FINNEAS</p>
+                    </div>
+                    <div class="retro-player">
+                        <button class="pixel-play" aria-label="Play song">
+                            ▶
+                        </button>
+
+                        <div class="player-details">
+                            <div class="pixel-progress">
+                                <div class="progress-fill"></div>
+                            </div>
+
+                            <div class="player-time">
+                                <span class="current-time">0:00</span>
+                                <span class="total-time">0:00</span>
+                            </div>
+                        </div>
+
+                        <audio class="track-audio"
+                               src="{{ url_for('static', filename='audio/lets-fall-in-love-1964.mp3') }}">
+                        </audio>
+                    </div>
+                </div>
+                <!-- SONG 2 -->
+                <div class="vinyl-card">
+                    <div class="vinyl vinyl-purple">
+                        <div class="vinyl-label">02</div>
+                    </div>
+
+                    <div class="vinyl-info">
+                        <h3>Every Girl Gets Her Wish</h3>
+                        <p>Saint Avangeline</p>
+                    </div>
+
+                    <div class="retro-player">
+                        <button class="pixel-play" aria-label="Play song">
+                            ▶
+                        </button>
+
+                        <div class="player-details">
+                            <div class="pixel-progress">
+                                <div class="progress-fill"></div>
+                            </div>
+
+                            <div class="player-time">
+                                <span class="current-time">0:00</span>
+                                <span class="total-time">0:00</span>
+                            </div>
+                        </div>
+                        <audio class="track-audio"
+                               src="{{ url_for('static', filename='audio/every-girl-gets-her-wish.mp3') }}">
+                        </audio>
+                    </div>
+                </div>
+
+                <!-- SONG 3 -->
+                <div class="vinyl-card">
+                    <div class="vinyl vinyl-yellow">
+                        <div class="vinyl-label">03</div>
+                    </div>
+
+                    <div class="vinyl-info">
+                        <h3>Cigarettes out the Window</h3>
+                        <p>TV Girl</p>
+                    </div>
+
+                    <div class="retro-player">
+                        <button class="pixel-play" aria-label="Play song">
+                            ▶
+                        </button>
+
+                        <div class="player-details">
+                            <div class="pixel-progress">
+                                <div class="progress-fill"></div>
+                            </div>
+
+                            <div class="player-time">
+                                <span class="current-time">0:00</span>
+                                <span class="total-time">0:00</span>
+                            </div>
+                        </div>
+
+                        <audio class="track-audio"
+                               src="{{ url_for('static', filename='audio/cigarettes-out-the-window.mp3') }}">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- THINGS I COULD TALK ABOUT FOREVER -->
+
+        <section class="about-forever">
+
+            <span class="about-note-label">
+                07/ PLEASE DON'T GET ME STARTED
+            </span>
+
+            <h2>Things I could talk about forever</h2>
+
+            <div class="forever-topics">
+
+                <span class="topic topic-pink">
+                    Feminism
+                </span>
+
+                <span class="topic topic-yellow">
+                    Economic crises
+                </span>
+
+                <span class="topic topic-purple">
+                    Wonderland
+                </span>
+
+            </div>
+
+            <p class="forever-caption">
+                one conversation away from a very long rant.
+            </p>
+
+        </section>
+
+
+        <!-- SOCIAL LINKS -->
+
+        <footer class="about-footer">
+
+            <p>
+                YOU'VE REACHED THE END OF MY LITTLE PAGE.
+            </p>
+
+            <div class="about-socials">
+
+                <!-- Add social links when decided -->
+
+                <div class="about-socials">
+                    <a href="https://www.instagram.com/madebygargi" target="_blank" rel="noopener noreferrer">
+                        INSTAGRAM ↗
+                    </a>
+                    <a href="https://www.linkedin.com/in/gargi-chaudhari" target="_blank" rel="noopener noreferrer">
+                        LINKEDIN ↗
+                    </a>
+                </div>
+            </div>
+
+            <p class="about-footer-credit">
+                made with a little too much personality ♡
+            </p>
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- Bottom decorative strip -->
+
+    <section class="tagline-strip">
+
+        ✿ YOUR WARDROBE, REIMAGINED ✿
+
+        &nbsp;&nbsp;&nbsp;
+
+        GOOD STYLE NEVER GOES OUT OF FASHION
+
+        &nbsp;&nbsp;&nbsp; ✿
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer class="status-bar">
+
+        <span>● NOOK SYSTEM STATUS: READY</span>
+
+        <span>MADE FOR YOUR WARDROBE ♡</span>
+
+        <span>VERSION 1.0</span>
+
+    </footer>
+
+<script>
+
+const players = document.querySelectorAll(".retro-player");
+
+function formatTime(seconds) {
+    if (!Number.isFinite(seconds)) return "0:00";
+
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+
+    return `${minutes}:${String(remainingSeconds).padStart(2, "0")}`;
+}
+
+players.forEach(player => {
+
+    const audio = player.querySelector(".track-audio");
+    const button = player.querySelector(".pixel-play");
+    const progress = player.querySelector(".pixel-progress");
+    const fill = player.querySelector(".progress-fill");
+    const currentTime = player.querySelector(".current-time");
+    const totalTime = player.querySelector(".total-time");
+
+    audio.addEventListener("loadedmetadata", () => {
+        totalTime.textContent = formatTime(audio.duration);
+    });
+
+    button.addEventListener("click", () => {
+
+        if (audio.paused) {
+
+            // Stop every other song
+            document.querySelectorAll(".track-audio").forEach(otherAudio => {
+                if (otherAudio !== audio) {
+                    otherAudio.pause();
+                    otherAudio.closest(".retro-player")
+                        .querySelector(".pixel-play").textContent = "▶";
+                }
+            });
+
+            audio.play();
+            button.textContent = "Ⅱ";
+
+        } else {
+
+            audio.pause();
+            button.textContent = "▶";
+
+        }
+
+    });
+
+    audio.addEventListener("timeupdate", () => {
+
+        currentTime.textContent = formatTime(audio.currentTime);
+
+        const percentage = (audio.currentTime / audio.duration) * 100;
+
+        fill.style.width = `${percentage}%`;
+
+    });
+
+    audio.addEventListener("ended", () => {
+        button.textContent = "▶";
+        fill.style.width = "0%";
+        currentTime.textContent = "0:00";
+    });
+
+    progress.addEventListener("click", (event) => {
+
+        if (!Number.isFinite(audio.duration)) return;
+
+        const rect = progress.getBoundingClientRect();
+        const clickPosition = event.clientX - rect.left;
+        const percentage = clickPosition / rect.width;
+
+        audio.currentTime = percentage * audio.duration;
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
